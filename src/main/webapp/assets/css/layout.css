@@ -1,0 +1,62 @@
+.app{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width:240px;
+    background:white;
+    border-right:1px solid var(--border);
+    padding:20px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:30px;
+    color:var(--primary);
+}
+
+.sidebar nav a{
+    display:block;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:8px;
+    color:var(--text-light);
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover{
+    background:var(--primary-light);
+    color:var(--primary);
+}
+
+/* Main */
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.topbar{
+    height:70px;
+    background:white;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+}
+
+.topbar input{
+    width:280px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid var(--border);
+}
+
+.content{
+    padding:25px;
+    overflow:auto;
+}

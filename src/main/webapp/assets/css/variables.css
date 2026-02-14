@@ -1,0 +1,28 @@
+:root {
+
+    /* Primary */
+    --primary: #4f7cff;
+    --primary-light: #eef3ff;
+
+    /* Background */
+    --bg-main: #f5f7fb;
+    --bg-card: #ffffff;
+
+    /* Text */
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+
+    /* Borders */
+    --border: #e5e7eb;
+
+    /* Status Colors */
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+
+    /* Shadows */
+    --shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    /* Radius */
+    --radius: 14px;
+}
