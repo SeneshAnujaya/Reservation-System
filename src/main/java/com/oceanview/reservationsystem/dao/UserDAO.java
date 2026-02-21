@@ -1,4 +1,4 @@
-package com.oceanview.dao;
+package com.oceanview.reservationsystem.dao;
 
 import java.sql.*;
 
@@ -6,7 +6,7 @@ public class UserDAO {
 
     private static final String URL = "jdbc:mysql://localhost:3306/oceanview";
     private static final String USER = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "";
 
     public boolean checkUser(String username, String password) {
 

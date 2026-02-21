@@ -1,6 +1,7 @@
 package com.oceanview.reservationsystem.controller;
 
-import com.oceanview.service.UserService;
+//import com.oceanview.service.UserService;
+import com.oceanview.reservationsystem.service.UserService;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -9,7 +10,7 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
-    private UserService userService = new UserService();
+    private final UserService userService = new UserService();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

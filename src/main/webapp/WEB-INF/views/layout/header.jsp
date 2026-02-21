@@ -25,6 +25,7 @@
             <div class="user">
                 Welcome, ${sessionScope.user}
             </div>
+            <a href="logout" class="btn btn-danger">Logout</a>
         </header>
 
         <section class="content">
