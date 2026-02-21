@@ -4,7 +4,11 @@
     <nav>
         <a href="${pageContext.request.contextPath}/dashboard" class="active">Dashboard</a>
         <a href="#">Guests</a>
-        <a href="#">Reservations</a>
+<%--        <a href="#">Reservations</a>--%>
+        <a href="${pageContext.request.contextPath}/reservations"
+           class="${pageContext.request.requestURI.contains('reservations') ? 'active' : ''}">
+            Reservations
+        </a>
         <a href="#">Rooms</a>
         <a href="#">Billing</a>
         <a href="#">Settings</a>
