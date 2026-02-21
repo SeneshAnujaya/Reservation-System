@@ -1,38 +1,3 @@
-<%--<%@ page contentType="text/html;charset=UTF-8" %>--%>
-<%--<%@ page import="java.util.List" %>--%>
-<%--<%@ page import="com.oceanview.reservationsystem.model.Reservation" %>--%>
-
-<%--<%@ include file="../layout/header.jsp" %>--%>
-
-<%--<h2>Reservations</h2>--%>
-
-<%--<a href="addReservation.jsp">Add New Reservation</a>--%>
-
-<%--<table border="1">--%>
-<%--    <tr>--%>
-<%--        <th>ID</th>--%>
-<%--        <th>Guest</th>--%>
-<%--        <th>Email</th>--%>
-<%--        <th>Room</th>--%>
-<%--        <th>Status</th>--%>
-<%--    </tr>--%>
-
-<%--    <%--%>
-<%--        List<Reservation> list = (List<Reservation>) request.getAttribute("reservationList");--%>
-<%--        for (Reservation r : list) {--%>
-<%--    %>--%>
-<%--    <tr>--%>
-<%--        <td><%= r.getId() %></td>--%>
-<%--        <td><%= r.getGuestName() %></td>--%>
-<%--        <td><%= r.getEmail() %></td>--%>
-<%--        <td><%= r.getRoomType() %></td>--%>
-<%--        <td><%= r.getStatus() %></td>--%>
-<%--    </tr>--%>
-<%--    <% } %>--%>
-<%--</table>--%>
-
-<%--<%@ include file="../layout/footer.jsp" %>--%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.oceanview.reservationsystem.model.Reservation" %>
@@ -84,8 +49,17 @@
                 </span>
             </td>
             <td>
-                <a href="#" class="btn-sm edit">Edit</a>
-                <a href="#" class="btn-sm delete">Delete</a>
+<%--                <a href="#" class="btn-sm edit">Edit</a>--%>
+    <a href="${pageContext.request.contextPath}/edit-reservation?id=<%= r.getId() %>"
+       class="btn-sm edit">
+        Edit
+    </a>
+<%--                <a href="#" class="btn-sm delete">Delete</a>--%>
+    <a href="${pageContext.request.contextPath}/delete-reservation?id=<%= r.getId() %>"
+       class="btn-sm delete"
+       onclick="return confirm('Are you sure you want to delete this reservation?');">
+        Delete
+    </a>
             </td>
         </tr>
         <%
