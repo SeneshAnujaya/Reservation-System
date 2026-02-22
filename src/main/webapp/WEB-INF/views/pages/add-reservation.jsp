@@ -80,6 +80,26 @@
         </div>
 
         <div class="form-group">
+            <label>Status</label>
+            <select name="status">
+                <option value="CONFIRMED"
+                        <%= isEdit && "CONFIRMED".equals(r.getStatus()) ? "selected" : "" %>>
+                    CONFIRMED
+                </option>
+
+                <option value="PENDING"
+                        <%= isEdit && "PENDING".equals(r.getStatus()) ? "selected" : "" %>>
+                    PENDING
+                </option>
+
+                <option value="CANCELLED"
+                        <%= isEdit && "CANCELLED".equals(r.getStatus()) ? "selected" : "" %>>
+                    CANCELLED
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
             <label>Check In</label>
 <%--            <input type="date" name="checkIn" required value="<%= isEdit && r.getCheckIn() != null ? r.getCheckIn().toString() : "" %>">--%>
             <input type="date" name="checkIn" required

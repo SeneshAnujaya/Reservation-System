@@ -37,7 +37,13 @@ public class AddReservationServlet extends HttpServlet {
             r.setRoomType(request.getParameter("roomType"));
             r.setCheckIn(Date.valueOf(request.getParameter("checkIn")));
             r.setCheckOut(Date.valueOf(request.getParameter("checkOut")));
-            r.setStatus("CONFIRMED");
+
+            String status = request.getParameter("status");
+            if (status == null || status.isEmpty()) {
+                status = "CONFIRMED";
+            }
+            r.setStatus(status);
+//            r.setStatus("CONFIRMED");
 
             reservationDAO.insertReservation(r);
 
