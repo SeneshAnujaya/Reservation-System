@@ -86,7 +86,7 @@
 .btn-sm.bill {
     background: var(--primary);
     color: white;
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /* Table */
