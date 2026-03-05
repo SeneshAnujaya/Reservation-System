@@ -12,6 +12,7 @@ public class Reservation {
     private Date checkIn;
     private Date checkOut;
     private String status;
+    private int roomTypeId;
 
     // Getters
 
@@ -47,6 +48,10 @@ public class Reservation {
         return status;
     }
 
+    public int getRoomTypeId() {
+        return roomTypeId;
+    }
+
     // Setters
 
     public void setId(int id) {
@@ -79,5 +84,9 @@ public class Reservation {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public void setRoomTypeId(int roomTypeId) {
+        this.roomTypeId = roomTypeId;
     }
 }

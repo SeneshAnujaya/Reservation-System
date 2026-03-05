@@ -1,7 +1,9 @@
 package com.oceanview.reservationsystem.controller;
 
 import com.oceanview.reservationsystem.dao.ReservationDAO;
+import com.oceanview.reservationsystem.dao.RoomDAO;
 import com.oceanview.reservationsystem.model.Reservation;
+import com.oceanview.reservationsystem.model.Room;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,6 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.util.List;
 
 @WebServlet("/edit-reservation")
 public class EditReservationServlet extends HttpServlet {
@@ -24,6 +27,11 @@ public class EditReservationServlet extends HttpServlet {
 
         Reservation existingReservation =
                 reservationDAO.selectReservation(id);
+
+        RoomDAO roomDAO = new RoomDAO(); // create DAO
+        List<Room> rooms = roomDAO.selectAllRooms(); // fetch all rooms
+
+        request.setAttribute("roomList", rooms); // send to JSP
 
         request.setAttribute("reservation", existingReservation);
 
@@ -43,10 +51,13 @@ public class EditReservationServlet extends HttpServlet {
             r.setGuestName(request.getParameter("guestName"));
             r.setEmail(request.getParameter("email"));
             r.setPhone(request.getParameter("phone"));
-            r.setRoomType(request.getParameter("roomType"));
+//            r.setRoomType(request.getParameter("roomType"));
             r.setCheckIn(Date.valueOf(request.getParameter("checkIn")));
             r.setCheckOut(Date.valueOf(request.getParameter("checkOut")));
             r.setStatus(request.getParameter("status"));
+
+            r.setRoomType(request.getParameter("roomType"));
+            r.setRoomTypeId(Integer.parseInt(request.getParameter("roomId")));
 
             reservationDAO.updateReservation(r);
 

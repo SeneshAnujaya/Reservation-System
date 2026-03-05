@@ -52,7 +52,11 @@
                     Delete
                 </a>
 
-                <a href="${pageContext.request.contextPath}/billing?id=<%= r.getId() %>"
+<%--                <a href="${pageContext.request.contextPath}/billing?id=<%= r.getId() %>"--%>
+<%--                   class="btn-sm bill">--%>
+<%--                    Checkout--%>
+<%--                </a>--%>
+                <a href="${pageContext.request.contextPath}/checkout?id=<%= r.getId() %>"
                    class="btn-sm bill">
                     Checkout
                 </a>

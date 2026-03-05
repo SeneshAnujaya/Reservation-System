@@ -10,6 +10,9 @@
     boolean isEdit = (r != null);
 %>
 
+<%@ page import="java.util.List" %>
+<%@ page import="com.oceanview.reservationsystem.model.Room" %>
+
 <div class="page-header">
     <div>
 <%--        <h2>Add Reservation</h2>--%>
@@ -61,21 +64,44 @@
 <%--&lt;%&ndash;                <option>Double</option>&ndash;%&gt;--%>
 <%--&lt;%&ndash;                <option>Suite</option>&ndash;%&gt;--%>
 <%--            </select>--%>
-            <select name="roomType">
-                <option value="Single"
-                        <%= isEdit && "Single".equals(r.getRoomType()) ? "selected" : "" %>>
-                    Single
+<%--            <select name="roomType">--%>
+<%--                <option value="Single"--%>
+<%--                        <%= isEdit && "Single".equals(r.getRoomType()) ? "selected" : "" %>>--%>
+<%--                    Single--%>
+<%--                </option>--%>
+
+<%--                <option value="Double"--%>
+<%--                        <%= isEdit && "Double".equals(r.getRoomType()) ? "selected" : "" %>>--%>
+<%--                    Double--%>
+<%--                </option>--%>
+
+<%--                <option value="Suite"--%>
+<%--                        <%= isEdit && "Suite".equals(r.getRoomType()) ? "selected" : "" %>>--%>
+<%--                    Suite--%>
+<%--                </option>--%>
+<%--            </select>--%>
+            <select name="roomId" required>
+
+                <%
+                    List<Room> rooms =
+                            (List<Room>) request.getAttribute("roomList");
+
+                    if (rooms != null) {
+                        for (Room room : rooms) {
+                %>
+
+                <option value="<%= room.getRoomId() %>"
+                        <%= isEdit && r.getRoomTypeId() == room.getRoomId() ? "selected" : "" %>>
+
+                    <%= room.getRoomType() %>
+
                 </option>
 
-                <option value="Double"
-                        <%= isEdit && "Double".equals(r.getRoomType()) ? "selected" : "" %>>
-                    Double
-                </option>
+                <%
+                        }
+                    }
+                %>
 
-                <option value="Suite"
-                        <%= isEdit && "Suite".equals(r.getRoomType()) ? "selected" : "" %>>
-                    Suite
-                </option>
             </select>
         </div>
 
