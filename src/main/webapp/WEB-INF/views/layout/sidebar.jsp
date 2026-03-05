@@ -14,7 +14,12 @@
             Rooms
         </a>
 <%--        <a href="#">Rooms</a>--%>
-        <a href="#">Billing</a>
+
+        <a href="${pageContext.request.contextPath}/billings"
+           class="${pageContext.request.requestURI.contains('billings') ? 'active' : ''}">
+            Billings
+        </a>
+<%--        <a href="#">Billing</a>--%>
         <a href="#">Settings</a>
     </nav>
 </aside>
