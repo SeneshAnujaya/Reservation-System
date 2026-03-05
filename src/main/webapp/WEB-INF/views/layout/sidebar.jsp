@@ -9,7 +9,11 @@
            class="${pageContext.request.requestURI.contains('reservations') ? 'active' : ''}">
             Reservations
         </a>
-        <a href="#">Rooms</a>
+        <a href="${pageContext.request.contextPath}/rooms"
+           class="${pageContext.request.requestURI.contains('rooms') ? 'active' : ''}">
+            Rooms
+        </a>
+<%--        <a href="#">Rooms</a>--%>
         <a href="#">Billing</a>
         <a href="#">Settings</a>
     </nav>
