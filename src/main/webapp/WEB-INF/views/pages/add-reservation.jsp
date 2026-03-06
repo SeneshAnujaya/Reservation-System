@@ -1,3 +1,163 @@
+<%--<%@ page contentType="text/html;charset=UTF-8" %>--%>
+
+<%--<%@ include file="../layout/header.jsp" %>--%>
+
+<%--<%--%>
+<%--    com.oceanview.reservationsystem.model.Reservation r =--%>
+<%--            (com.oceanview.reservationsystem.model.Reservation)--%>
+<%--                    request.getAttribute("reservation");--%>
+
+<%--    boolean isEdit = (r != null);--%>
+<%--%>--%>
+
+<%--<%@ page import="java.util.List" %>--%>
+<%--<%@ page import="com.oceanview.reservationsystem.model.Room" %>--%>
+
+<%--<div class="page-header">--%>
+<%--    <div>--%>
+<%--&lt;%&ndash;        <h2>Add Reservation</h2>&ndash;%&gt;--%>
+<%--&lt;%&ndash;        <p class="subtitle">Create a new guest reservation</p>&ndash;%&gt;--%>
+<%--    <h2><%= isEdit ? "Edit Reservation" : "Add Reservation" %></h2>--%>
+<%--    <p class="subtitle">--%>
+<%--        <%= isEdit ? "Update reservation details" : "Create a new guest reservation" %>--%>
+<%--    </p>--%>
+<%--    </div>--%>
+<%--</div>--%>
+
+<%--<div class="card form-card">--%>
+
+
+
+<%--    <form method="post"--%>
+<%--          action="${pageContext.request.contextPath}/<%= isEdit ? "edit-reservation" : "add-reservation" %>"--%>
+<%--          class="form-grid">--%>
+
+<%--        <% if (isEdit) { %>--%>
+<%--        <input type="hidden" name="id" value="<%= r.getId() %>">--%>
+<%--        <% } %>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Guest Name</label>--%>
+<%--&lt;%&ndash;            <input type="text" name="guestName" required>&ndash;%&gt;--%>
+<%--            <input type="text" name="guestName"--%>
+<%--                   value="<%= isEdit ? r.getGuestName() : "" %>" required>--%>
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Email</label>--%>
+<%--            <input type="email" name="email" value="<%= isEdit ? r.getEmail() : "" %>">--%>
+
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Phone</label>--%>
+<%--            <input type="text" name="phone" value="<%= isEdit ? r.getPhone() : "" %>">--%>
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Room Type</label>--%>
+<%--&lt;%&ndash;            <select name="roomType">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <option <%= isEdit && r.getRoomType().equals("Single") ? "selected" : "" %>>Single</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <option <%= isEdit && r.getRoomType().equals("Double") ? "selected" : "" %>>Double</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <option <%= isEdit && r.getRoomType().equals("Suite") ? "selected" : "" %>>Suite</option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;                <option>Single</option>&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;                <option>Double</option>&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;                <option>Suite</option>&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;            </select>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            <select name="roomType">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <option value="Single"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <%= isEdit && "Single".equals(r.getRoomType()) ? "selected" : "" %>>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                    Single&ndash;%&gt;--%>
+<%--&lt;%&ndash;                </option>&ndash;%&gt;--%>
+
+<%--&lt;%&ndash;                <option value="Double"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <%= isEdit && "Double".equals(r.getRoomType()) ? "selected" : "" %>>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                    Double&ndash;%&gt;--%>
+<%--&lt;%&ndash;                </option>&ndash;%&gt;--%>
+
+<%--&lt;%&ndash;                <option value="Suite"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        <%= isEdit && "Suite".equals(r.getRoomType()) ? "selected" : "" %>>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                    Suite&ndash;%&gt;--%>
+<%--&lt;%&ndash;                </option>&ndash;%&gt;--%>
+<%--&lt;%&ndash;            </select>&ndash;%&gt;--%>
+<%--            <select name="roomId" required>--%>
+
+<%--                <%--%>
+<%--                    List<Room> rooms =--%>
+<%--                            (List<Room>) request.getAttribute("roomList");--%>
+
+<%--                    if (rooms != null) {--%>
+<%--                        for (Room room : rooms) {--%>
+<%--                %>--%>
+
+<%--                <option value="<%= room.getRoomId() %>"--%>
+<%--                        <%= isEdit && r.getRoomTypeId() == room.getRoomId() ? "selected" : "" %>>--%>
+
+<%--                    <%= room.getRoomType() %>--%>
+
+<%--                </option>--%>
+
+<%--                <%--%>
+<%--                        }--%>
+<%--                    }--%>
+<%--                %>--%>
+
+<%--            </select>--%>
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Status</label>--%>
+<%--            <select name="status">--%>
+<%--                <option value="CONFIRMED"--%>
+<%--                        <%= isEdit && "CONFIRMED".equals(r.getStatus()) ? "selected" : "" %>>--%>
+<%--                    CONFIRMED--%>
+<%--                </option>--%>
+
+<%--                <option value="PENDING"--%>
+<%--                        <%= isEdit && "PENDING".equals(r.getStatus()) ? "selected" : "" %>>--%>
+<%--                    PENDING--%>
+<%--                </option>--%>
+
+<%--                <option value="CANCELLED"--%>
+<%--                        <%= isEdit && "CANCELLED".equals(r.getStatus()) ? "selected" : "" %>>--%>
+<%--                    CANCELLED--%>
+<%--                </option>--%>
+<%--            </select>--%>
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Check In</label>--%>
+<%--&lt;%&ndash;            <input type="date" name="checkIn" required value="<%= isEdit && r.getCheckIn() != null ? r.getCheckIn().toString() : "" %>">&ndash;%&gt;--%>
+<%--            <input type="date" name="checkIn" required--%>
+<%--                   value="<%= (isEdit && r.getCheckIn() != null)--%>
+<%--                ? r.getCheckIn().toString()--%>
+<%--                : "" %>">--%>
+<%--        </div>--%>
+
+<%--        <div class="form-group">--%>
+<%--            <label>Check Out</label>--%>
+<%--&lt;%&ndash;            <input type="date" name="checkOut" required value="<%= isEdit ? r.getCheckOut() !=null ? r.getCheckOut().toString() : "" %>">&ndash;%&gt;--%>
+<%--            <input type="date" name="checkOut" required--%>
+<%--                   value="<%= (isEdit && r.getCheckOut() != null)--%>
+<%--                ? r.getCheckOut().toString()--%>
+<%--                : "" %>">--%>
+<%--        </div>--%>
+
+<%--        <div class="form-actions">--%>
+<%--            <a href="${pageContext.request.contextPath}/reservations"--%>
+<%--               class="btn btn-danger">Cancel</a>--%>
+
+<%--            <button type="submit" class="btn btn-primary">--%>
+<%--                Save Reservation--%>
+<%--            </button>--%>
+<%--        </div>--%>
+
+<%--    </form>--%>
+
+<%--</div>--%>
+
+<%--<%@ include file="../layout/footer.jsp" %>--%>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <%@ include file="../layout/header.jsp" %>
@@ -13,147 +173,124 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.oceanview.reservationsystem.model.Room" %>
 
-<div class="page-header">
-    <div>
-<%--        <h2>Add Reservation</h2>--%>
-<%--        <p class="subtitle">Create a new guest reservation</p>--%>
-    <h2><%= isEdit ? "Edit Reservation" : "Add Reservation" %></h2>
-    <p class="subtitle">
-        <%= isEdit ? "Update reservation details" : "Create a new guest reservation" %>
-    </p>
+<div class="dashboard reservations-form-page">
+
+    <div class="dashboard-top">
+        <div class="dashboard-title">
+            <h2><%= isEdit ? "Edit Reservation" : "Add Reservation" %></h2>
+            <p class="subtitle">
+                <%= isEdit ? "Update reservation details" : "Create a new guest reservation" %>
+            </p>
+        </div>
     </div>
-</div>
 
-<div class="card form-card">
+    <div class="dash-card form-card">
 
-
-
-    <form method="post"
-          action="${pageContext.request.contextPath}/<%= isEdit ? "edit-reservation" : "add-reservation" %>"
-          class="form-grid">
-
-        <% if (isEdit) { %>
-        <input type="hidden" name="id" value="<%= r.getId() %>">
-        <% } %>
-
-        <div class="form-group">
-            <label>Guest Name</label>
-<%--            <input type="text" name="guestName" required>--%>
-            <input type="text" name="guestName"
-                   value="<%= isEdit ? r.getGuestName() : "" %>" required>
+        <div class="dash-card-head">
+            <div>
+                <h3>Guest & stay details</h3>
+                <p class="dash-muted">Fill in the information below to continue</p>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" value="<%= isEdit ? r.getEmail() : "" %>">
+        <form method="post"
+              action="${pageContext.request.contextPath}/<%= isEdit ? "edit-reservation" : "add-reservation" %>"
+              class="form-grid modern-form">
 
-        </div>
+            <% if (isEdit) { %>
+            <input type="hidden" name="id" value="<%= r.getId() %>">
+            <% } %>
 
-        <div class="form-group">
-            <label>Phone</label>
-            <input type="text" name="phone" value="<%= isEdit ? r.getPhone() : "" %>">
-        </div>
+            <div class="form-group">
+                <label>Guest Name</label>
+                <input type="text" name="guestName"
+                       value="<%= isEdit ? r.getGuestName() : "" %>" required>
+            </div>
 
-        <div class="form-group">
-            <label>Room Type</label>
-<%--            <select name="roomType">--%>
-<%--                <option <%= isEdit && r.getRoomType().equals("Single") ? "selected" : "" %>>Single</option>--%>
-<%--                <option <%= isEdit && r.getRoomType().equals("Double") ? "selected" : "" %>>Double</option>--%>
-<%--                <option <%= isEdit && r.getRoomType().equals("Suite") ? "selected" : "" %>>Suite</option>--%>
-<%--&lt;%&ndash;                <option>Single</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <option>Double</option>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <option>Suite</option>&ndash;%&gt;--%>
-<%--            </select>--%>
-<%--            <select name="roomType">--%>
-<%--                <option value="Single"--%>
-<%--                        <%= isEdit && "Single".equals(r.getRoomType()) ? "selected" : "" %>>--%>
-<%--                    Single--%>
-<%--                </option>--%>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email"
+                       value="<%= isEdit ? r.getEmail() : "" %>">
+            </div>
 
-<%--                <option value="Double"--%>
-<%--                        <%= isEdit && "Double".equals(r.getRoomType()) ? "selected" : "" %>>--%>
-<%--                    Double--%>
-<%--                </option>--%>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" name="phone"
+                       value="<%= isEdit ? r.getPhone() : "" %>">
+            </div>
 
-<%--                <option value="Suite"--%>
-<%--                        <%= isEdit && "Suite".equals(r.getRoomType()) ? "selected" : "" %>>--%>
-<%--                    Suite--%>
-<%--                </option>--%>
-<%--            </select>--%>
-            <select name="roomId" required>
+            <div class="form-group">
+                <label>Room Type</label>
+                <select name="roomId" required>
+                    <%
+                        List<Room> rooms =
+                                (List<Room>) request.getAttribute("roomList");
 
-                <%
-                    List<Room> rooms =
-                            (List<Room>) request.getAttribute("roomList");
-
-                    if (rooms != null) {
-                        for (Room room : rooms) {
-                %>
-
-                <option value="<%= room.getRoomId() %>"
-                        <%= isEdit && r.getRoomTypeId() == room.getRoomId() ? "selected" : "" %>>
-
-                    <%= room.getRoomType() %>
-
-                </option>
-
-                <%
+                        if (rooms != null) {
+                            for (Room room : rooms) {
+                    %>
+                    <option value="<%= room.getRoomId() %>"
+                            <%= isEdit && r.getRoomTypeId() == room.getRoomId() ? "selected" : "" %>>
+                        <%= room.getRoomType() %>
+                    </option>
+                    <%
+                            }
                         }
-                    }
-                %>
+                    %>
+                </select>
+            </div>
 
-            </select>
-        </div>
+            <div class="form-group">
+                <label>Status</label>
+                <select name="status">
+                    <option value="CONFIRMED"
+                            <%= isEdit && "CONFIRMED".equals(r.getStatus()) ? "selected" : "" %>>
+                        CONFIRMED
+                    </option>
 
-        <div class="form-group">
-            <label>Status</label>
-            <select name="status">
-                <option value="CONFIRMED"
-                        <%= isEdit && "CONFIRMED".equals(r.getStatus()) ? "selected" : "" %>>
-                    CONFIRMED
-                </option>
+                    <option value="PENDING"
+                            <%= isEdit && "PENDING".equals(r.getStatus()) ? "selected" : "" %>>
+                        PENDING
+                    </option>
 
-                <option value="PENDING"
-                        <%= isEdit && "PENDING".equals(r.getStatus()) ? "selected" : "" %>>
-                    PENDING
-                </option>
+                    <option value="CANCELLED"
+                            <%= isEdit && "CANCELLED".equals(r.getStatus()) ? "selected" : "" %>>
+                        CANCELLED
+                    </option>
+                </select>
+            </div>
 
-                <option value="CANCELLED"
-                        <%= isEdit && "CANCELLED".equals(r.getStatus()) ? "selected" : "" %>>
-                    CANCELLED
-                </option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label>Check In</label>
+                <input type="date" name="checkIn" required
+                       value="<%= (isEdit && r.getCheckIn() != null)
+                            ? r.getCheckIn().toString()
+                            : "" %>">
+            </div>
 
-        <div class="form-group">
-            <label>Check In</label>
-<%--            <input type="date" name="checkIn" required value="<%= isEdit && r.getCheckIn() != null ? r.getCheckIn().toString() : "" %>">--%>
-            <input type="date" name="checkIn" required
-                   value="<%= (isEdit && r.getCheckIn() != null)
-                ? r.getCheckIn().toString()
-                : "" %>">
-        </div>
+            <div class="form-group">
+                <label>Check Out</label>
+                <input type="date" name="checkOut" required
+                       value="<%= (isEdit && r.getCheckOut() != null)
+                            ? r.getCheckOut().toString()
+                            : "" %>">
+            </div>
 
-        <div class="form-group">
-            <label>Check Out</label>
-<%--            <input type="date" name="checkOut" required value="<%= isEdit ? r.getCheckOut() !=null ? r.getCheckOut().toString() : "" %>">--%>
-            <input type="date" name="checkOut" required
-                   value="<%= (isEdit && r.getCheckOut() != null)
-                ? r.getCheckOut().toString()
-                : "" %>">
-        </div>
+            <div class="form-actions">
+                <a href="${pageContext.request.contextPath}/reservations"
+                   class="btn btn-danger form-btn-cancel">
+                    <i class="fa-solid fa-xmark"></i>
+                    Cancel
+                </a>
 
-        <div class="form-actions">
-            <a href="${pageContext.request.contextPath}/reservations"
-               class="btn btn-danger">Cancel</a>
+                <button type="submit" class="btn btn-primary form-btn-save">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Reservation
+                </button>
+            </div>
 
-            <button type="submit" class="btn btn-primary">
-                Save Reservation
-            </button>
-        </div>
-
-    </form>
-
+        </form>
+    </div>
 </div>
 
 <%@ include file="../layout/footer.jsp" %>
