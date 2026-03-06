@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/layout.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/components.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/dashboard.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/sidebar.css">
 <%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/other.css">--%>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -23,11 +25,11 @@
     <main class="main">
 
         <header class="topbar">
-            <input type="text" placeholder="Search...">
-            <div class="user">
-                Welcome, ${sessionScope.user}
+            <input type="text" placeholder="Search..." style="background-color: #f3fbf6">
+            <div class="user" style="color: #2b6945">
+<%--                <i class="fa-solid fa-hand wave-icon"></i>--%>
+                👋 Welcome, ${sessionScope.user}
             </div>
-            <a href="logout" class="btn btn-danger">Logout</a>
         </header>
 
         <section class="content">
