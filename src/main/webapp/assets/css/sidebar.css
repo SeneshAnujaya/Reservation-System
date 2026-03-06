@@ -1,0 +1,300 @@
+/*!* ===== OceanView Sidebar ===== *!*/
+/*.sidebar{*/
+/*    --ov-green:#15803d;*/
+/*    --ov-green-dark:#0f3b33;*/
+/*    --ov-bg:#f5f7fb;*/
+/*    --ov-border:#e5e7eb;*/
+/*    --ov-text:#111827;*/
+/*    --ov-muted:#6b7280;*/
+
+/*    width:240px;*/
+/*    background:#ffffff;*/
+/*    border-right:1px solid var(--ov-border);*/
+/*    min-height:100vh;*/
+/*    display:flex;*/
+/*    flex-direction:column;*/
+/*    position:sticky;*/
+/*    top:0;*/
+/*    left:0;*/
+/*    z-index:20;*/
+/*}*/
+
+/*.sidebar-inner{*/
+/*    padding:18px 14px;*/
+/*    display:flex;*/
+/*    flex-direction:column;*/
+/*    height:100%;*/
+/*}*/
+
+/*.sidebar-logo{*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    gap:10px;*/
+/*    margin-bottom:20px;*/
+/*}*/
+
+/*.sidebar-logo-icon{*/
+/*    width:34px;*/
+/*    height:34px;*/
+/*    border-radius:12px;*/
+/*    background:linear-gradient(135deg, var(--ov-green), #22c55e);*/
+/*    color:#ffffff;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*}*/
+
+/*.sidebar-logo-text{*/
+/*    display:flex;*/
+/*    flex-direction:column;*/
+/*}*/
+/*.sidebar-logo-name{*/
+/*    font-weight:800;*/
+/*    font-size:15px;*/
+/*    letter-spacing:-0.02em;*/
+/*    color:var(--ov-green-dark);*/
+/*}*/
+/*.sidebar-logo-sub{*/
+/*    font-size:11px;*/
+/*    color:var(--ov-muted);*/
+/*}*/
+
+/*.sidebar-nav{*/
+/*    display:flex;*/
+/*    flex-direction:column;*/
+/*    gap:4px;*/
+/*    margin-bottom:auto;*/
+/*    margin-top:4px;*/
+/*}*/
+
+/*.sidebar-section-label{*/
+/*    font-size:11px;*/
+/*    text-transform:uppercase;*/
+/*    letter-spacing:0.16em;*/
+/*    color:var(--ov-muted);*/
+/*    padding:10px 10px 4px;*/
+/*}*/
+
+/*.sidebar-link{*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    gap:10px;*/
+/*    padding:9px 10px;*/
+/*    border-radius:10px;*/
+/*    color:var(--ov-text);*/
+/*    font-size:13px;*/
+/*    font-weight:500;*/
+/*    text-decoration:none;*/
+/*    transition:background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.08s;*/
+/*}*/
+
+/*.sidebar-link-icon{*/
+/*    width:26px;*/
+/*    height:26px;*/
+/*    border-radius:9px;*/
+/*    background:#f3f4f6;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*    color:#4b5563;*/
+/*    flex-shrink:0;*/
+/*}*/
+
+/*.sidebar-link-label{*/
+/*    white-space:nowrap;*/
+/*}*/
+
+/*.sidebar-link:hover{*/
+/*    background:#f3fbf6;*/
+/*    transform:translateY(-1px);*/
+/*}*/
+
+/*.sidebar-link.active{*/
+/*    background:linear-gradient(135deg, var(--ov-green), #22c55e);*/
+/*    color:#ffffff;*/
+/*    box-shadow:0 14px 30px rgba(21, 128, 61, 0.35);*/
+/*}*/
+
+/*.sidebar-link.active .sidebar-link-icon{*/
+/*    background:rgba(255,255,255,0.18);*/
+/*    color:#ffffff;*/
+/*}*/
+
+/*.sidebar-footer{*/
+/*    margin-top:18px;*/
+/*    padding:10px 6px 4px;*/
+/*    border-top:1px solid #edf0f5;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:space-between;*/
+/*    gap:10px;*/
+/*}*/
+
+/*.sidebar-user{*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    gap:8px;*/
+/*}*/
+
+/*.sidebar-user-avatar{*/
+/*    width:30px;*/
+/*    height:30px;*/
+/*    border-radius:999px;*/
+/*    background:rgba(21, 128, 61, 0.14);*/
+/*    color:var(--ov-green-dark);*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*    font-size:12px;*/
+/*    font-weight:800;*/
+/*}*/
+
+/*.sidebar-user-name{*/
+/*    font-size:12px;*/
+/*    font-weight:700;*/
+/*    color:var(--ov-text);*/
+/*}*/
+/*.sidebar-user-role{*/
+/*    font-size:11px;*/
+/*    color:var(--ov-muted);*/
+/*}*/
+
+/*.sidebar-icon-btn{*/
+/*    width:32px;*/
+/*    height:32px;*/
+/*    border-radius:10px;*/
+/*    border:1px solid var(--ov-border);*/
+/*    background:#ffffff;*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    justify-content:center;*/
+/*    cursor:pointer;*/
+/*    color:#4b5563;*/
+/*}*/
+/*.sidebar-icon-btn:hover{*/
+/*    background:#f9fafb;*/
+/*}*/
+
+/*!* Responsive: collapse sidebar on very small screens if needed *!*/
+/*@media (max-width: 720px){*/
+/*    .sidebar{*/
+/*        position:fixed;*/
+/*        inset-block:0;*/
+/*        z-index:40;*/
+/*    }*/
+/*}*/
+
+/* OceanView sidebar */
+.sidebar {
+    --ov-green:#15803d;
+    --ov-green-dark:#0f3b33;
+    --ov-border:#e5e7eb;
+
+    width:220px;
+    min-height:100vh;
+    background:#ffffff;
+    border-right:1px solid var(--ov-border);
+    padding:20px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.sidebar .logo {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    font-size:16px;
+    color:var(--ov-green-dark);
+}
+
+.sidebar .logo i {
+    width:28px;
+    height:28px;
+    border-radius:9px;
+    background:linear-gradient(135deg, var(--ov-green), #22c55e);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+}
+
+.sidebar nav {
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.sidebar nav a {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:10px;
+    color:#4b5563;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.sidebar nav a i {
+    width:20px;
+    text-align:center;
+    color:var(--ov-green);
+    font-size:14px;
+}
+
+.sidebar nav a span {
+    white-space:nowrap;
+}
+
+.sidebar nav a:hover:not(.active) {
+    background:#f3fbf6;
+    color:var(--ov-green-dark);
+}
+
+.sidebar nav a.active {
+    background:linear-gradient(135deg, var(--ov-green), #22c55e);
+    color:#ffffff;
+    box-shadow:0 12px 26px rgba(21,128,61,0.35);
+}
+
+.sidebar nav a.active i {
+    color:#ffffff;
+}
+
+.sidebar nav{
+    flex: 1;
+}
+
+/* Logout button style (matches theme) */
+.sidebar-logout{
+    margin-top: 14px;
+    display:flex;
+    align-items:center;
+    /*justify-content:center;*/
+    gap:10px;
+
+    padding:11px 12px;
+    border-radius: 10px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    /*box-shadow:0 12px 26px rgba(21,128,61,0.30);*/
+    transition:transform 0.08s, filter 0.15s;
+    background: #ccffd5;
+    color:#4b5563;
+}
+
+.sidebar-logout i{
+    /*color:#4b5563;*/
+    color:var(--ov-green);
+}
+
+.sidebar-logout:hover{
+    transform:translateY(-1px);
+    filter:brightness(0.98);
+}
