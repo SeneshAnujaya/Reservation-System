@@ -2,7 +2,7 @@
     <div class="logo">🏨 OceanView</div>
 
     <nav>
-        <a href="${pageContext.request.contextPath}/dashboard" class="active">Dashboard</a>
+        <a href="${pageContext.request.contextPath}/dashboard" class="${pageContext.request.requestURI.contains('dashboard') ? 'active' : ''}">Dashboard</a>
         <a href="#">Guests</a>
 <%--        <a href="#">Reservations</a>--%>
         <a href="${pageContext.request.contextPath}/reservations"
@@ -19,7 +19,9 @@
            class="${pageContext.request.requestURI.contains('billings') ? 'active' : ''}">
             Billings
         </a>
+
+        <a href="${pageContext.request.contextPath}/help" class="${pageContext.request.requestURI.contains('billings') ? 'active' : ''}">Help</a>
 <%--        <a href="#">Billing</a>--%>
-        <a href="#">Settings</a>
+<%--        <a href="#">Settings</a>--%>
     </nav>
 </aside>
