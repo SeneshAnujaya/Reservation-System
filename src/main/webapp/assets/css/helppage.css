@@ -1,0 +1,155 @@
+/* ===== Help page (OceanView theme) ===== */
+.dashboard.help-page{
+    --ov-green:#15803d;
+    --ov-green-dark:#0f3b33;
+    --ov-bg:#f5f7fb;
+    --ov-card:#ffffff;
+    --ov-border:#e5e7eb;
+    --ov-text:#111827;
+    --ov-muted:#6b7280;
+    --ov-shadow:0 16px 45px rgba(15, 23, 42, 0.10);
+}
+
+.help-layout{
+    margin-top:10px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+/* Hero */
+.help-hero{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    align-items:flex-start;
+}
+
+.help-hero-left h3{
+    margin:0 0 6px;
+    font-size:18px;
+}
+
+.help-hero-right ul{
+    margin:0;
+    padding-left:18px;
+    font-size:13px;
+    color:var(--ov-text);
+}
+
+.help-hero-right li{
+    margin-bottom:4px;
+}
+
+.help-hero-right span{
+    color:var(--ov-green-dark);
+    font-weight:600;
+}
+
+.help-tags{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+}
+
+.help-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:600;
+    background:#ecfdf5;
+    color:#166534;
+    border:1px solid #bbf7d0;
+}
+
+/* Grid of help cards */
+.help-page .help-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
+    gap:14px;
+}
+
+.help-card h3{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.help-card ol,
+.help-card ul{
+    margin:0;
+    padding-left:20px;
+    font-size:13px;
+    color:var(--ov-text);
+}
+
+.help-card li{
+    margin-bottom:4px;
+}
+
+.help-card p{
+    margin-top:10px;
+    font-size:13px;
+    color:var(--ov-muted);
+}
+
+/* Ensure cards use same base style as dashboard */
+.help-page .dash-card{
+    background:var(--ov-card);
+    border:1px solid var(--ov-border);
+    border-radius:14px;
+    box-shadow:var(--ov-shadow);
+    padding:16px;
+}
+
+@media (max-width: 768px){
+    .help-hero{
+        flex-direction:column;
+    }
+}
+
+/* Help page typography + icon colors */
+.dashboard.help-page .dashboard-title h2{
+    color:#111827;            /* black-ish title */
+}
+
+.help-card h3,
+.help-hero-left h3{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:700;
+    color:#111827;            /* black titles */
+    margin:0 0 0;
+}
+.help-card-title-wrap {
+    display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem
+}
+
+/* circular green icons next to titles */
+.help-icon{
+    width:26px;
+    height:26px;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    background:rgba(21,128,61,0.10);
+    color:#15803d;            /* your green */
+}
+
+/* make smaller icons in tags green as well */
+.help-tags .help-tag i,
+.help-hero-right li span{
+    color:#15803d;
+}
+
+/* Optional: ensure hero icons/text don't get overridden elsewhere */
+.dashboard.help-page .dash-muted{
+    color:#6b7280;
+}
