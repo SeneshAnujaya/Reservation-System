@@ -617,3 +617,43 @@
         grid-template-columns:1fr;
     }
 }
+
+/* Optional: invoice view button variant */
+.res-actions .btn-sm.pill.view{
+    border-color:#bfdbfe;
+    background:#eff6ff;
+    color:#1d4ed8;
+}
+
+/*Help Page*/
+
+/* Help page using dashboard theme */
+.help-page .help-grid{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:14px;
+}
+
+.help-card h3{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.help-card ol,
+.help-card ul{
+    margin:0;
+    padding-left:20px;
+    font-size:13px;
+    color:var(--ov-text);
+}
+
+.help-card li{
+    margin-bottom:4px;
+}
+
+.help-card p{
+    margin-top:10px;
+    font-size:13px;
+    color:var(--ov-muted);
+}
