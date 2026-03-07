@@ -1,111 +1,3 @@
-<%--<%@ page contentType="text/html;charset=UTF-8" %>--%>
-<%--<%@ include file="../layout/header.jsp" %>--%>
-<%--<%--%>
-<%--    com.oceanview.reservationsystem.model.Billing bill =--%>
-<%--            (com.oceanview.reservationsystem.model.Billing) request.getAttribute("bill");--%>
-<%--%>--%>
-
-<%--<div class="card invoice-card">--%>
-<%--    <h1>Ocean View Resort</h1>--%>
-<%--    <h3>Invoice #<%= bill.getBillingId() %></h3>--%>
-<%--    <p>Guest: <%= bill.getGuestName() %></p>--%>
-<%--    <p>Room: <%= bill.getRoomType() %></p>--%>
-<%--    <p>Check In: <%= bill.getCheckIn() %></p>--%>
-<%--    <p>Check Out: <%= bill.getCheckOut() %></p>--%>
-
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <th>Description</th>--%>
-<%--            <th>Quantity / Nights</th>--%>
-<%--            <th>Rate</th>--%>
-<%--            <th>Total</th>--%>
-<%--        </tr>--%>
-<%--        <tr>--%>
-<%--            <td>Room Charge</td>--%>
-<%--            <td>--%>
-<%--                <%--%>
-<%--                    long nights = java.time.temporal.ChronoUnit.DAYS.between(--%>
-<%--                            bill.getCheckIn().toLocalDate(),--%>
-<%--                            bill.getCheckOut().toLocalDate()--%>
-<%--                    );--%>
-<%--                    out.print(nights);--%>
-<%--                %>--%>
-<%--            </td>--%>
-<%--            <td>100.00</td>--%>
-<%--            <td><%= bill.getTotalAmount() %></td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-
-<%--    <p><strong>Total Amount: </strong> <%= bill.getTotalAmount() %></p>--%>
-
-<%--    <button onclick="window.print()" class="btn btn-primary">Print Invoice</button>--%>
-<%--</div>--%>
-
-<%--<%@ include file="../layout/footer.jsp" %>--%>
-
-<%--<%@ page contentType="text/html;charset=UTF-8" %>--%>
-<%--<%--%>
-<%--    com.oceanview.reservationsystem.model.Billing bill =--%>
-<%--            (com.oceanview.reservationsystem.model.Billing) request.getAttribute("bill");--%>
-<%--%>--%>
-<%--<!DOCTYPE html>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <title>Invoice #<%= bill.getBillingId() %></title>--%>
-<%--    <style>--%>
-<%--        body { font-family: Arial, sans-serif; margin: 20px; }--%>
-<%--        .invoice { max-width: 800px; margin: auto; border: 1px solid #ccc; padding: 20px; }--%>
-<%--        h1, h2, h3 { text-align: center; margin-bottom: 5px; }--%>
-<%--        table { width: 100%; border-collapse: collapse; margin-top: 20px; }--%>
-<%--        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }--%>
-<%--        th { background-color: #f5f5f5; }--%>
-<%--        .total { text-align: right; margin-top: 20px; font-size: 18px; }--%>
-<%--        @media print {--%>
-<%--            body * { visibility: hidden; }--%>
-<%--            .invoice, .invoice * { visibility: visible; }--%>
-<%--            .invoice { position: absolute; top: 0; left: 0; width: 100%; }--%>
-<%--        }--%>
-<%--    </style>--%>
-<%--</head>--%>
-<%--<body>--%>
-<%--<div class="invoice">--%>
-<%--    <h1>Ocean View Resort</h1>--%>
-<%--    <h2>Invoice #<%= bill.getBillingId() %></h2>--%>
-<%--    <p><strong>Guest:</strong> <%= bill.getGuestName() %></p>--%>
-<%--    <p><strong>Room:</strong> <%= bill.getRoomType() %></p>--%>
-<%--    <p><strong>Check In:</strong> <%= bill.getCheckIn() %></p>--%>
-<%--    <p><strong>Check Out:</strong> <%= bill.getCheckOut() %></p>--%>
-
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <th>Description</th>--%>
-<%--            <th>Quantity / Nights</th>--%>
-<%--            <th>Rate</th>--%>
-<%--            <th>Total</th>--%>
-<%--        </tr>--%>
-<%--        <%--%>
-<%--            long nights = java.time.temporal.ChronoUnit.DAYS.between(--%>
-<%--                    bill.getCheckIn().toLocalDate(),--%>
-<%--                    bill.getCheckOut().toLocalDate()--%>
-<%--            );--%>
-<%--        %>--%>
-<%--        <tr>--%>
-<%--            <td>Room Charge</td>--%>
-<%--            <td><%= nights %></td>--%>
-<%--            <td><%= String.format("%.2f", bill.getTotalAmount() / nights) %></td>--%>
-<%--            <td><%= String.format("%.2f", bill.getTotalAmount()) %></td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-
-<%--    <div class="total"><strong>Total Amount: </strong> <%= String.format("%.2f", bill.getTotalAmount()) %></div>--%>
-
-<%--    <div style="text-align: center; margin-top: 20px;">--%>
-<%--        <button onclick="window.print()" class="btn">Print Invoice</button>--%>
-<%--    </div>--%>
-<%--</div>--%>
-<%--</body>--%>
-<%--</html>--%>
-
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="../layout/header.jsp" %>
@@ -119,118 +11,145 @@
     );
 %>
 
-<div class="page-header">
-    <div>
-        <h2>Invoice #<%= bill.getBillingId() %></h2>
-        <p class="subtitle">Ocean View Resort - Guest Invoice</p>
-    </div>
-</div>
+<div class="dashboard invoice-page">
 
-<div class="card invoice-card">
+    <div class="dashboard-top">
+        <div class="dashboard-title">
+            <h2>Invoice #<%= bill.getBillingId() %></h2>
+            <p class="subtitle">Ocean View Resort – Guest Invoice</p>
+        </div>
 
-    <!-- Invoice Header -->
-    <div class="invoice-header">
-        <h1>Ocean View Resort</h1>
-        <p>Professional Hotel Invoice</p>
-        <div class="guest-info">
-            <p><strong>Guest:</strong> <%= bill.getGuestName() %></p>
-            <p><strong>Room:</strong> <%= bill.getRoomType() %></p>
-            <p><strong>Check In:</strong> <%= bill.getCheckIn() %></p>
-            <p><strong>Check Out:</strong> <%= bill.getCheckOut() %></p>
+        <div class="dashboard-actions">
+            <button type="button" onclick="window.print()" class="dash-btn dash-btn-primary inv-print-btn">
+                <i class="fa-solid fa-print"></i>
+                <span>Print Invoice</span>
+            </button>
+            <a href="${pageContext.request.contextPath}/billings" class="dash-btn dash-btn-outline">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Billings</span>
+            </a>
         </div>
     </div>
 
-    <!-- Invoice Table -->
-    <table class="invoice-table">
-        <thead>
-        <tr>
-            <th>Description</th>
-            <th>Quantity / Nights</th>
-            <th>Rate</th>
-            <th>Total</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Room Charge</td>
-            <td><%= nights %></td>
-            <td><%= String.format("%.2f", bill.getTotalAmount() / nights) %></td>
-            <td><%= String.format("%.2f", bill.getTotalAmount()) %></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="dash-card invoice-card">
 
-    <div class="invoice-total">
-        <strong>Total Amount:</strong> <%= String.format("%.2f", bill.getTotalAmount()) %>
+        <!-- Modern invoice header with logo -->
+        <div class="invoice-header">
+            <div class="invoice-brand">
+                <img src="${pageContext.request.contextPath}/assets/images/oceanlogo.png" alt="Ocean View Resort" class="invoice-logo" />
+                <div class="invoice-brand-text">
+<%--                    <h1>Ocean View Resort</h1>--%>
+<%--                    <p>Professional Hotel Invoice</p>--%>
+                </div>
+            </div>
+            <div class="invoice-meta">
+                <span class="invoice-id">Invoice #<%= bill.getBillingId() %></span>
+                <span class="invoice-status paid">PAID</span>
+            </div>
+        </div>
+
+        <div class="invoice-guest">
+            <h3>Bill To</h3>
+            <p><strong>Guest:</strong> <%= bill.getGuestName() %></p>
+            <p><strong>Room:</strong> <%= bill.getRoomType() %></p>
+            <p><strong>Check-in:</strong> <%= bill.getCheckIn() %></p>
+            <p><strong>Check-out:</strong> <%= bill.getCheckOut() %></p>
+            <p><strong>Nights:</strong> <%= nights %></p>
+        </div>
+
+        <div class="invoice-table-wrap">
+            <table class="dash-table invoice-table">
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity / Nights</th>
+                    <th>Rate (Rs.)</th>
+                    <th class="dash-ta-right">Total (Rs.)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Room charge</td>
+                    <td><%= nights %></td>
+                    <td><%= String.format("%.2f", bill.getTotalAmount() / nights) %></td>
+                    <td class="dash-ta-right"><%= String.format("%.2f", bill.getTotalAmount()) %></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="invoice-total-row">
+            <span>Total Amount</span>
+            <strong>Rs. <%= String.format("%.2f", bill.getTotalAmount()) %></strong>
+        </div>
+
+        <div class="invoice-footer">
+            <p>Thank you for staying with us.</p>
+            <p class="dash-muted">Ocean View Resort – Professional Hotel Invoice</p>
+        </div>
+
     </div>
-
-    <div class="invoice-actions">
-        <button onclick="window.print()" class="btn btn-primary">Print Invoice</button>
-    </div>
-
 </div>
 
 <style>
-    /* Modern Invoice Card */
-    .invoice-card {
-        background: #fff;
+    /* Invoice page – OceanView theme */
+    .dashboard.invoice-page { --ov-green:#15803d; --ov-green-dark:#0f3b33; --ov-border:#e5e7eb; --ov-muted:#6b7280; --ov-shadow:0 16px 45px rgba(15,23,42,0.10); }
+
+    .invoice-page .invoice-card { max-width: 820px; margin-top: 12px; padding: 24px 28px; }
+
+    .invoice-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--ov-border);
+        margin-bottom: 20px;
+    }
+
+    .invoice-brand { display: flex; align-items: center; gap: 14px; }
+    .invoice-logo { height: 48px; width: auto; max-width: 160px; object-fit: contain; }
+    .invoice-brand-text h1 { font-size: 22px; margin: 0 0 4px; color: var(--ov-green-dark); }
+    .invoice-brand-text p { font-size: 13px; color: var(--ov-muted); margin: 0; }
+
+    .invoice-meta { text-align: right; }
+    .invoice-id { display: block; font-size: 14px; font-weight: 700; color: #111827; margin-bottom: 6px; }
+    .invoice-status { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .invoice-status.paid { background: #ecfdf5; color: #166534; border: 1px solid #bbf7d0; }
+
+    .invoice-guest { margin-bottom: 20px; }
+    .invoice-guest h3 { font-size: 13px; margin: 0 0 8px; color: var(--ov-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .invoice-guest p { margin: 4px 0; font-size: 14px; color: #111827; }
+
+    .invoice-table-wrap { overflow: auto; border: 1px solid var(--ov-border); border-radius: 12px; margin-bottom: 16px; }
+    .invoice-page .invoice-table { min-width: 100%; }
+    .invoice-page .invoice-table th { background: #f9fafb; }
+    .invoice-page .invoice-table td, .invoice-page .invoice-table th { padding: 12px 14px; }
+
+    .invoice-total-row {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 16px;
+        background: rgba(21,128,61,0.08);
+        border: 1px solid rgba(21,128,61,0.2);
         border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        padding: 30px;
-        max-width: 900px;
-        margin: 20px auto;
+        font-size: 16px;
     }
+    .invoice-total-row strong { color: var(--ov-green-dark); font-size: 18px; }
 
-    .invoice-header h1 {
-        font-size: 28px;
-        margin-bottom: 5px;
-        color: #007bff;
-    }
+    .invoice-footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--ov-border); text-align: center; }
+    .invoice-footer p { margin: 4px 0; font-size: 13px; color: #374151; }
+    .invoice-footer .dash-muted { color: var(--ov-muted); font-size: 12px; }
 
-    .invoice-header p {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 15px;
-    }
+    .inv-print-btn { margin-right: 0; }
 
-    .guest-info p {
-        margin: 3px 0;
-        font-size: 14px;
-    }
-
-    .invoice-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    .invoice-table th, .invoice-table td {
-        border: 1px solid #ddd;
-        padding: 12px 15px;
-        text-align: left;
-    }
-
-    .invoice-table th {
-        background: #f5f5f5;
-    }
-
-    .invoice-total {
-        text-align: right;
-        font-size: 18px;
-        margin-top: 20px;
-    }
-
-    .invoice-actions {
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    /* Print styling */
     @media print {
-        body * { visibility: hidden; } /* hide everything */
-        .invoice-card, .invoice-card * { visibility: visible; }
-        .invoice-card { position: absolute; top: 0; left: 0; width: 100%; }
-        .invoice-actions { display: none; } /* hide print button */
+        body * { visibility: hidden; }
+        .dashboard.invoice-page, .dashboard.invoice-page * { visibility: visible; }
+        .dashboard-top, .invoice-actions, .inv-print-btn, .dash-btn { display: none !important; }
+        .invoice-page .invoice-card { position: absolute; top: 0; left: 0; width: 100%; max-width: 100%; box-shadow: none; }
     }
 </style>
 
