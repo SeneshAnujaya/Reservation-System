@@ -47,6 +47,20 @@ public class DashboardServlet extends HttpServlet {
         request.setAttribute("totalRooms", dashboardDAO.getTotalRooms());
         request.setAttribute("totalReservations", dashboardDAO.getTotalReservations());
 
+        int[] weekly = dashboardDAO.getWeeklyReservations();
+
+        String weeklyData = "[" +
+                weekly[1] + "," +   // Monday
+                weekly[2] + "," +   // Tuesday
+                weekly[3] + "," +
+                weekly[4] + "," +
+                weekly[5] + "," +
+                weekly[6] + "," +
+                weekly[0] +         // Sunday
+                "]";
+
+        request.setAttribute("weeklyReservations", weeklyData);
+
         RequestDispatcher dispatcher =
                 request.getRequestDispatcher("/WEB-INF/views/pages/dashboard.jsp");
 

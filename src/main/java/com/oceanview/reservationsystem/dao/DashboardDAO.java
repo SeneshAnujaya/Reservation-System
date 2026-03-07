@@ -79,4 +79,32 @@ public class DashboardDAO {
         return count;
     }
 
+    public int[] getWeeklyReservations() {
+
+        int[] weekly = new int[7];
+
+        String sql = "SELECT DAYOFWEEK(check_in) as day, COUNT(*) as total " +
+                "FROM reservations " +
+                "WHERE YEARWEEK(check_in, 1) = YEARWEEK(CURDATE(), 1) " +
+                "GROUP BY DAYOFWEEK(check_in)";
+
+        try (Connection con = getConnection();
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                int day = rs.getInt("day");
+                int total = rs.getInt("total");
+
+                int index = day - 1; // convert MySQL day to array index
+                weekly[index] = total;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return weekly;
+    }
+
 }
